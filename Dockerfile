@@ -10,4 +10,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-CMD [ "python3", "app.py" ,"--region europe-west1", "--input cth.txt", "--output gs://outputstuff/results/outputs", "--project gcpcicddemoproj","--temp_location gs://outputstuff/tmp/"]
+CMD [ "python3", "app.py" ,"--region europe-west1", "--input cth.txt", "--output gs://outputstuff2/results/outputs", "--runner DataflowRunner","--project python-326216","--temp_location gs://outputstuff2/tmp/"]
