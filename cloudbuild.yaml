@@ -1,5 +1,8 @@
 steps:
   # Install dependencies
+  - name: python
+    entrypoint: pip
+    args: ["install", "-r", "requirements.txt", "--user"]
   # Docker Build
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'build', '-t', 'gcr.io/pythondockertest/imago5', '.' ]
